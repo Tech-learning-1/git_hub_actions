@@ -8,6 +8,8 @@ file = Path("action1.yaml")
 directory = Path("src")
 current_dir = Path.cwd()
 present_dir = os.getcwd()
+files = os.listdir()
+print(f"Files in current directory: {files}")
 print(f"Current directory using pathlib: {current_dir}")
 print(f"Current directory using os: {present_dir}")
 def deletefile(file):
@@ -18,7 +20,7 @@ def deletefile(file):
 
 def makedirectory(directory):
     directory.mkdir(exist_ok=True)
-
+ 
 def movefile(source, dest):  # Fixed indentation
     if source.exists():
         shutil.move(str(source), str(dest))
