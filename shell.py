@@ -1,11 +1,13 @@
 from pathlib import Path
 import shutil
+import os
 
 source = Path('calc.py')
 dest = Path('src/calc.py')
 file = Path("action1.yaml")
 directory = Path("src")
-
+current_dir = Path.cwd()
+present_dir = os.getcwd()
 def deletefile(file):
     if file.exists():
         file.unlink()
