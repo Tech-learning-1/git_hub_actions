@@ -16,9 +16,7 @@ jobs:
           python -m pip intall --upgrade pip
           pip install pytest
      - name: python scripting
-       uses: actions/run-shell-script@v1
-       with:
-         script: |
+       run: |
            python shell.py
      -  name: build and test
         run : | 
